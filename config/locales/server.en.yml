@@ -1,0 +1,3 @@
+en:
+  site_settings:
+    email_short_date_format_type: "Date format to use for dates in emails. See <a href='https://ruby-doc.org/core/Time.html#method-i-strftime'>Ruby strftime</a> for details."
