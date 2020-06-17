@@ -8,7 +8,7 @@
 after_initialize do
   ApplicationHelper.class_eval do
     def short_date(dt)
-      return I18n.l(dt, format: SiteSetting.email_short_date_format_type)
+      I18n.l(dt, format: SiteSetting.email_short_date_format_type)
     end
   end
 end
