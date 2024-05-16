@@ -6,9 +6,7 @@
 # authors: Penar Musaraj
 
 after_initialize do
-  ApplicationHelper.class_eval do
-    def short_date(dt)
-      I18n.l(dt, format: SiteSetting.email_short_date_format_type)
-    end
-  end
+  require_relative "lib/email_short_date_format/application_helper_extension"
+
+  reloadable_patch { ApplicationHelper.prepend(EmailShortDateFormat::ApplicationHelperExtension) }
 end
